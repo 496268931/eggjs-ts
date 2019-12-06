@@ -1,0 +1,14 @@
+node_modules
+typings
+src/**/*.js
+src/**/*.js.map
+dist
+# ormconfig.json
+# .vscode
+# .vscode/*
+apidoc/
+yarn.lock
+yarn-error.log
+package-lock.json
+logs
+run
