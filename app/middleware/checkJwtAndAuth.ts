@@ -28,11 +28,11 @@ export default () => async (ctx: Context, next: () => Promise<any>) => {
         const { authorization = '' } = ctx.request.header;
         const token = authorization.replace('Bearer ', '');
         const secret = ctx.app.config.jwt.secret
-        console.log(secret)
-        console.log(ctx.app.jwt.sign({ "a": 798 }, secret))
+        // console.log(secret)
+        // console.log(ctx.app.jwt.sign({ "a": 798 }, secret))
         try {
             const jwtInfo = ctx.app.jwt.verify(token, secret);
-            console.log(jwtInfo)
+            // console.log(jwtInfo)
             ctx.state.jwtInfo = jwtInfo;
         } catch (err) {
             ctx.throw(401, err.message);

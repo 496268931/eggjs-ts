@@ -8,7 +8,8 @@ export default class NewsController extends Controller {
         // const token = app.jwt.sign({ foo: 'bar' }, app.config.jwt.secret);
         console.log(1);
         const userInfo = await ctx.service.seedo.find();
-        ctx.body = userInfo;
+        ctx.success(userInfo)
+        // ctx.body = userInfo;
     }
 
 }
